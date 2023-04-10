@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('name',30);
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->unsignedBigInteger('unit_id');
-            $table->foreign('unit_id')->references('id')->on('units');
-            $table->integer('quantity');
-            $table->text('properties');
+            $table->string('partnumber');
+            $table->float('price',10,2);
+            $table->integer('weight',6,2);
+            $table->float('mobis',6,2);
             $table->timestamps();
         });
     }
